@@ -291,7 +291,7 @@ define(["dojo/_base/declare",
 
 		results_reset: function(evt) {
 			this.form_field.options[0].selected = true;
-			query('span', this.selected_item).shift().textContent = this.default_text;
+			query('span', this.selected_item).shift().innerHTML = this.default_text;
 			this.show_search_field_default();
 			domConstruct.destroy(evt.target);
 			this.dojo_fire_event("change");
