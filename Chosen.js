@@ -688,7 +688,7 @@ define(["dojo/_base/declare",
 					if(data.selected && this.is_multiple) {
 						this.choice_build(data);
 					} else if(data.selected && !this.is_multiple) {
-						query('span', this.selected_item).shift().textContent = data.text;
+						query('span', this.selected_item).shift().innerHTML = data.text;
 						if(this.options.allow_single_deselect) {
 							this.single_deselect_control_build();
 						}
