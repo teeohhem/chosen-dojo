@@ -666,7 +666,7 @@ define(["dojo/_base/declare",
 			} else if(!this.is_multiple) {
 				var _this = this;
 				query('span', this.selected_item).forEach(function(child) {
-					child.textContent = _this.default_text;
+					child.innerHTML = _this.default_text;
 				});
 
 				if(_this.form_field.options.length <= _this.options.disable_search_threshold) {
